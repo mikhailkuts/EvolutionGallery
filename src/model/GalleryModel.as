@@ -3,11 +3,11 @@
  */
 package model {
 
-public class GalleryModel {
+import org.osflash.signals.Signal;
 
-	public function GalleryModel()
-	{
-	}
+public interface GalleryModel {
+
+	function get imageAddedSignal():Signal;
 
 }
 }

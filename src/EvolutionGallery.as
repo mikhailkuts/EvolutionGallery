@@ -17,6 +17,7 @@ import org.as3commons.logging.setup.target.TraceTarget;
 import robotlegs.GalleryConfig;
 import robotlegs.bender.bundles.mvcs.MVCSBundle;
 import robotlegs.bender.extensions.contextView.ContextView;
+import robotlegs.bender.extensions.signalCommandMap.SignalCommandMapExtension;
 import robotlegs.bender.framework.impl.Context;
 
 use namespace LOGGER_FACTORY;
@@ -40,26 +41,16 @@ public class EvolutionGallery extends Sprite
 
 	private function init():void
 	{
-		initLogging();
-		initNativeStage();
-		initRobotlegs();
-	}
-
-	private function initLogging():void
-	{
+		// Logging init
 		LOGGER_FACTORY.setup = new SimpleTargetSetup(new TraceTarget());
-	}
 
-	private function initNativeStage():void
-	{
+		// Stage init
 		stage.scaleMode = StageScaleMode.NO_SCALE;
 		stage.align = StageAlign.TOP_LEFT;
-	}
 
-	private function initRobotlegs():void
-	{
+		// Robotlegs init
 		new Context()
-			.install(MVCSBundle)
+			.install(MVCSBundle, SignalCommandMapExtension)
 			.configure(GalleryConfig, new ContextView(this));
 	}
 
