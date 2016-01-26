@@ -15,7 +15,7 @@ public dynamic class ModelEvent extends DynamicEvent
 
 	private var _emitter										:Object;
 
-	public function ModelEvent(eventType:String, emitter:Object = null, params:Object = null)
+	public function ModelEvent(eventType:String, params:Object = null, emitter:Object = null)
 	{
 		super(eventType, false, false);
 
