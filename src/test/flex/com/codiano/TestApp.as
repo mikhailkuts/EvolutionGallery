@@ -1,21 +1,50 @@
 /**
  * Created by kuts on 1/26/16.
  */
-package flex.com.codiano {
+package com.codiano {
 
 import com.codiano.utils.ArrayUtils;
+import com.codiano.utils.VectorUtils;
 import com.codiano.utils.packer.PackerRect;
 import com.codiano.utils.packer.RectPacker;
 
 import flexunit.framework.Assert;
 
-public class GalleryTests {
+public class TestApp {
 
 	[Test]
-	public function arraySortTest()
+	public function unshiftFromTest():void
 	{
-		var arr1:Array = [1, 3, 5, 7, 9, 11];
-		var arr2:Array = [2, 4, 6, 8, 10];
+		var vec:Vector.<int> = new <int>[1, 2, 3, 4, 5];
+
+		var size:int = vec.length;
+		var element:int = vec[2];
+
+		VectorUtils.unshiftFrom(vec, 2);
+
+		Assert.assertTrue(vec.length == size);
+		Assert.assertTrue(vec[0] == element);;
+	}
+
+	[Test]
+	public function pushFromTest():void
+	{
+		var vec:Vector.<int> = new <int>[1, 2, 3, 4, 5];
+
+		var size:int = vec.length;
+		var element:int = vec[2];
+
+		VectorUtils.pushFrom(vec, 2);
+
+		Assert.assertTrue(vec.length == size);
+		Assert.assertTrue(vec[size - 1] == element);
+	}
+
+	[Test]
+	public function arraySortTest():void
+	{
+		var arr1:Array = [1, 3, 4, 5, 7, 9, 11];
+		var arr2:Array = [2, 4, 4, 4, 4, 6, 8, 10];
 
 		var arr3:Array = ArrayUtils.sortedMerge(arr1, arr2);
 
