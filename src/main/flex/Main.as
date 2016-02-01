@@ -22,11 +22,11 @@ import robotlegs.bender.extensions.signalCommandMap.SignalCommandMapExtension;
 import robotlegs.bender.framework.impl.Context;
 
 [SWF(width="1000", height="600", frameRate="60", backgroundColor="#000000")]
-public class EvolutionGallery extends Sprite
+public class Main extends Sprite
 {
-	private static const log				:ILogger 			= getLogger(EvolutionGallery);
+	private static const log				:ILogger 			= getLogger(Main);
 
-	public function EvolutionGallery()
+	public function Main()
 	{
 		loaderInfo.addEventListener(Event.COMPLETE, loaderInfo_onComplete);
 	}

@@ -49,9 +49,6 @@
         <artifactId>flexmojos-maven-plugin</artifactId>
         <version>${flexmojos.version}</version>
         <extensions>true</extensions>
-        <configuration>
-          <sourceFile>EvolutionGallery.as</sourceFile>
-        </configuration>
       </plugin>
     </plugins>
   </build>
