@@ -2,7 +2,6 @@
 bin/
 bin-debug/
 bin-release/
-target/
 out/
 
 # Other files and folders
