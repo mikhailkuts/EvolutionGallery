@@ -14,15 +14,6 @@ You can run maven-runonce.* (libs local install) at project folder if Maven repo
 ArrayUtils.sortedMerge(arr1:Array, arr2:Array) and TestApp.arrayMergeTest(); for testing.
 
 ## Extra question. Explain what does this code do, how it works and what’s wrong with it:
-
-var xmlData:XML =
-<root>
-	<node myVal="1">data</node>
-	<node myVal="2"> data </node>
-	<node myVal="3"> data </node>
-	<node myVal="4"> data </node>
-	<node myVal="5"> data </node>
-</root>;
                
 xmlData.children().(@myVal % 2 && trace(@myVal));
 
