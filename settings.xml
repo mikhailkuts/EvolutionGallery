@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <profiles>
+        <profile>
+            <id>custom-profile</id>
+            <repositories>
+                <repository>
+                    <id>Nexus repository</id>
+                    <url>http://nexus-codiano.rhcloud.com/content/repositories/thirdparty/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+
+                <repository>
+                    <id>flex-mojos-repository</id>
+                    <url>http://repository.sonatype.org/content/groups/flexgroup/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+
+                <repository>
+                    <id>flex-mojos-internal-repository</id>
+                    <url>http://repository.sonatype.org/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>flex-mojos-plugin-repository</id>
+                    <url>http://repository.sonatype.org/content/groups/flexgroup/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+
+                <pluginRepository>
+                    <id>flex-mojos-internal-plugins-repository</id>
+                    <url>http://repository.sonatype.org/content/groups/public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>custom-profile</activeProfile>
+    </activeProfiles>
+</settings>

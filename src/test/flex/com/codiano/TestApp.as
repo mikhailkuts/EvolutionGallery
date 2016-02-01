@@ -41,7 +41,7 @@ public class TestApp {
 	}
 
 	[Test]
-	public function arraySortTest():void
+	public function arrayMergeTest():void
 	{
 		var arr1:Array = [1, 3, 4, 5, 7, 9, 11];
 		var arr2:Array = [2, 4, 4, 4, 4, 6, 8, 10];

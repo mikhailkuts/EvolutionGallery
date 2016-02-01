@@ -1,154 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!--
+<!--
 
-    Copyright 2008 Marvin Herman Froeder
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+  Copyright 2008 Marvin Herman Froeder
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-        http://www.apache.org/licenses/LICENSE-2.0
+      http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.codiano</groupId>
-  <artifactId>EvolutionGallery</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>swf</packaging>
+    <groupId>com.codiano</groupId>
+    <artifactId>EvolutionGallery</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>swf</packaging>
 
-  <name>Evolution Gallery</name>
+    <name>Evolution Gallery</name>
 
-  <properties>
-    <maven.version>3.2.5</maven.version>
-    <flexmojos.version>4.0-RC2</flexmojos.version>
-    <flex.sdk.version>4.5.1.21328</flex.sdk.version>
-    <flexunit.version>4.1.0-8</flexunit.version>
-    <loanshark.version>1.0</loanshark.version>
-    <greenshock.version>12.1.5</greenshock.version>
-    <robotlegs.version>2.2.0</robotlegs.version>
-    <robotlegsSignals.version>1.0.0b1</robotlegsSignals.version>
-    <as3signals.version>0.9-b</as3signals.version>
-    <as3commons.version>2.7.0</as3commons.version>
+    <properties>
+        <maven.version>3.2.5</maven.version>
+        <flexmojos.version>4.0-RC2</flexmojos.version>
+        <flex.sdk.version>4.5.1.21328</flex.sdk.version>
+        <flexunit.version>4.1.0-8</flexunit.version>
+        <loanshark.version>1.0</loanshark.version>
+        <greenshock.version>12.1.5</greenshock.version>
+        <robotlegs.version>2.2.0</robotlegs.version>
+        <robotlegsSignals.version>1.0.0b1</robotlegsSignals.version>
+        <as3signals.version>0.9-b</as3signals.version>
+        <as3commons.version>2.7.0</as3commons.version>
 
-    <flex.flashPlayer.command>/Applications/Flash Player.app/Contents/MacOS/Flash Player Debugger</flex.flashPlayer.command>
-  </properties>
+        <flex.flashPlayer.command>/Applications/Flash Player.app/Contents/MacOS/Flash Player Debugger
+        </flex.flashPlayer.command>
+    </properties>
 
-  <build>
-    <sourceDirectory>src/main/flex</sourceDirectory>
-    <testSourceDirectory>src/test/flex</testSourceDirectory>
-    <plugins>
-      <plugin>
-        <groupId>org.sonatype.flexmojos</groupId>
-        <artifactId>flexmojos-maven-plugin</artifactId>
-        <version>${flexmojos.version}</version>
-        <extensions>true</extensions>
-      </plugin>
-    </plugins>
-  </build>
+    <build>
+        <sourceDirectory>src/main/flex</sourceDirectory>
+        <testSourceDirectory>src/test/flex</testSourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.flexmojos</groupId>
+                <artifactId>flexmojos-maven-plugin</artifactId>
+                <version>${flexmojos.version}</version>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
 
-  <dependencies>
-    <dependency>
-      <groupId>com.adobe.flex.framework</groupId>
-      <artifactId>flex-framework</artifactId>
-      <version>${flex.sdk.version}</version>
-      <type>pom</type>
-    </dependency>
+    <dependencies>
+        <dependency>
+            <groupId>com.adobe.flex.framework</groupId>
+            <artifactId>flex-framework</artifactId>
+            <version>${flex.sdk.version}</version>
+            <type>pom</type>
+        </dependency>
 
-    <dependency>
-      <groupId>com.adobe.flexunit</groupId>
-      <artifactId>flexunit</artifactId>
-      <version>${flexunit.version}</version>
-      <classifier>flex</classifier>
-      <type>swc</type>
-    </dependency>
+        <dependency>
+            <groupId>com.adobe.flexunit</groupId>
+            <artifactId>flexunit</artifactId>
+            <version>${flexunit.version}</version>
+            <classifier>flex</classifier>
+            <type>swc</type>
+        </dependency>
 
-    <dependency>
-      <groupId>com.loanshark</groupId>
-      <artifactId>loanshark</artifactId>
-      <version>${loanshark.version}</version>
-      <type>swc</type>
-    </dependency>
+        <dependency>
+            <groupId>com.loanshark</groupId>
+            <artifactId>loanshark</artifactId>
+            <version>${loanshark.version}</version>
+            <type>swc</type>
+        </dependency>
 
-    <dependency>
-      <groupId>com.greensock</groupId>
-      <artifactId>greensock</artifactId>
-      <version>${greenshock.version}</version>
-      <type>swc</type>
-    </dependency>
+        <dependency>
+            <groupId>com.greensock</groupId>
+            <artifactId>greensock</artifactId>
+            <version>${greenshock.version}</version>
+            <type>swc</type>
+        </dependency>
 
-    <dependency>
-      <groupId>org.robotlegs</groupId>
-      <artifactId>robotlegs-framework</artifactId>
-      <version>${robotlegs.version}</version>
-      <type>swc</type>
-    </dependency>
+        <dependency>
+            <groupId>org.robotlegs</groupId>
+            <artifactId>robotlegs-framework</artifactId>
+            <version>${robotlegs.version}</version>
+            <type>swc</type>
+        </dependency>
 
-    <dependency>
-      <groupId>org.robotlegs.extensions</groupId>
-      <artifactId>SignalCommandMap</artifactId>
-      <version>${robotlegsSignals.version}</version>
-      <type>swc</type>
-    </dependency>
+        <dependency>
+            <groupId>org.robotlegs.extensions</groupId>
+            <artifactId>SignalCommandMap</artifactId>
+            <version>${robotlegsSignals.version}</version>
+            <type>swc</type>
+        </dependency>
 
-    <dependency>
-      <groupId>org.osflash</groupId>
-      <artifactId>as3-signals</artifactId>
-      <version>${as3signals.version}</version>
-      <type>swc</type>
-    </dependency>
+        <dependency>
+            <groupId>org.osflash</groupId>
+            <artifactId>as3-signals</artifactId>
+            <version>${as3signals.version}</version>
+            <type>swc</type>
+        </dependency>
 
-    <dependency>
-      <groupId>org.as3commons</groupId>
-      <artifactId>as3commons-logging</artifactId>
-      <version>${as3commons.version}</version>
-      <type>swc</type>
-    </dependency>
-  </dependencies>
+        <dependency>
+            <groupId>org.as3commons</groupId>
+            <artifactId>as3commons-logging</artifactId>
+            <version>${as3commons.version}</version>
+            <type>swc</type>
+        </dependency>
+    </dependencies>
 
-  <repositories>
-      <repository>
-          <id>flexunit-repository</id>
-          <url>http://nexus-codiano.rhcloud.com/content/repositories/thirdparty/</url>
-          <releases> <enabled>true</enabled> </releases>
-          <snapshots> <enabled>false</enabled> </snapshots>
-      </repository>
+    <repositories>
+        <repository>
+            <id>Nexus repository</id>
+            <url>http://nexus-codiano.rhcloud.com/content/repositories/thirdparty/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
 
-      <repository>
-          <id>flex-mojos-repository</id>
-          <url>http://repository.sonatype.org/content/groups/flexgroup/</url>
-          <releases> <enabled>true</enabled> </releases>
-          <snapshots> <enabled>false</enabled> </snapshots>
-      </repository>
+        <repository>
+            <id>flex-mojos-repository</id>
+            <url>http://repository.sonatype.org/content/groups/flexgroup/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
 
-      <repository>
-          <id>flex-mojos-internal-repository</id>
-          <url>http://repository.sonatype.org/content/groups/public/</url>
-          <releases> <enabled>true</enabled> </releases>
-          <snapshots> <enabled>true</enabled> </snapshots>
-      </repository>
-  </repositories>
+        <repository>
+            <id>flex-mojos-internal-repository</id>
+            <url>http://repository.sonatype.org/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
-  <pluginRepositories>
-      <pluginRepository>
-          <id>flex-mojos-plugin-repository</id>
-          <url>http://repository.sonatype.org/content/groups/flexgroup/</url>
-          <releases> <enabled>true</enabled> </releases>
-          <snapshots> <enabled>false</enabled> </snapshots>
-      </pluginRepository>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>flex-mojos-plugin-repository</id>
+            <url>http://repository.sonatype.org/content/groups/flexgroup/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
 
-      <pluginRepository>
-          <id>flex-mojos-internal-plugins-repository</id>
-          <url>http://repository.sonatype.org/content/groups/public/</url>
-          <releases> <enabled>true</enabled> </releases>
-          <snapshots> <enabled>true</enabled> </snapshots>
-      </pluginRepository>
-  </pluginRepositories>
+        <pluginRepository>
+            <id>flex-mojos-internal-plugins-repository</id>
+            <url>http://repository.sonatype.org/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>
