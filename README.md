@@ -7,7 +7,8 @@ Images layout calculating by selection the optimum place for each rectangle usin
 ### Extra task. Create a Maven configuration pom.xml for the project. It should include a test runner and working build config.
 
 Created at project folder.
-You can run maven-runonce.* (libs local install) at project folder if Maven repository not available.
+All dependencies were uploaded to http://nexus-codiano.rhcloud.com/index.html repository.
+You can run maven-runonce.* (libs local install) at project folder if repository not available.
 
 ### Extra task. Write method that takes two sorted arrays of integers (can be of any range, numbers can repeat, sizes of arrays can be different) and returns array of n + m length which is sorted in the same order. Do not use any type of built-in sorting.
 
