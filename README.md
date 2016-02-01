@@ -20,6 +20,9 @@ xmlData.children().(@myVal % 2 && trace(@myVal));
 - What does this code do:
 This code tracing odd node attribute values.
 
+- How it works:
+XMLList can be filtered by logic expressions. In the example above occurs iterating on every element and checking attribute myVal on even or odd (trace attribute value if it odd).
+
 - What’s wrong with it:
 Nodes filtering not work using code above because Boolean(trace(@myVal)) always return false.
 Also for tracing values ​​is better to use such a code: trace(xmlData.children().(@myVal % 2).@myVal);
